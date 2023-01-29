@@ -1,36 +1,25 @@
-import { useState, useEffect, useRef } from "react";
-import { products } from "./../../helpers/productsList";
+import { useState } from "react";
+
+import Category from "./Category";
+import products from "./../../helpers/productsList.json";
 
 import "./DropDownMenu.css";
 
-
 const DropDownMenu = () => {
 
-    const [dropdownMenu, setDropDownMenu] = useState('close');
-    const btnMenuRef = useRef(null);
+    const [openingMode, setOpeningMode] = useState('close');
 
-    useEffect( () => {
-        
-        if (dropdownMenu === 'open') {
-            btnMenuRef.current.classList.add('open');
-        } else {
-            btnMenuRef.current.classList.remove('open');
-        }
+    const toggleDropDownMenu = event => {
+        event.stopPropagation();
+        setOpeningMode( currentValue => currentValue === 'close' ? 'open' : 'close');
+    };
 
-    }, [dropdownMenu] );
-
-    const toggleDropDownMenu = () => {
-        setDropDownMenu( currentValue => currentValue === 'close' ? 'open' : 'close');
-    }
-
-    const Category = props => {
-        return <li><a className="nav-menu-link" href={`./${props.category}.html`}>{props.category[0].toUpperCase() + props.category.slice(1)}</a></li>
-    }
+    const closeDropDownMenu = () => setOpeningMode('close');
 
 
     return ( 
 
-        <span className="nav-menu" ref={btnMenuRef}>
+        <span className={openingMode === 'close' ? 'nav-menu' : 'nav-menu open'} onClick={closeDropDownMenu}>
 
             <div className="nav-btn" onClick={toggleDropDownMenu}>
                 <span className="bar"></span>
@@ -41,15 +30,12 @@ const DropDownMenu = () => {
             <ul className="nav-list">
 
                 {
-                    Object.keys(products).sort().map( (category, index) => {
-                        return <Category key={index} category={category} />
-                    })
+                    Object.keys(products).sort().map( category => <Category key={category} category={category} />)
                 }
 
-                <Category key="100" category="certificates" />
+                <Category key="certificates" category="certificates" />
                 
             </ul>
-
         </span>
     );
 }

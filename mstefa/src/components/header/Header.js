@@ -1,5 +1,6 @@
-import DropDownMenu from "./../dropdownMenu/DropDownMenu";
+import PropTypes from "prop-types";
 
+import DropDownMenu from "./../dropdownMenu/DropDownMenu";
 import "./Header.css";
 
 import cart from "./icons/cart.svg";
@@ -7,17 +8,15 @@ import heart from "./icons/heart.svg";
 import search from "./icons/search.svg";
 import user from "./icons/user.svg";
 
-const Header = (props) => {
-
+const Header = ({storeName}) => {
     return ( 
-
         <header className="header">
             <div className="container">
                 <nav className="nav" id="nav">
 
                     <DropDownMenu />
 
-                    <h1 className="logo"><a href="#!">{props.storeName}</a></h1>
+                    <h1 className="logo"><a href="#!">{storeName}</a></h1>
 
                     <ul className="nav-icons">
                         <li>
@@ -51,6 +50,10 @@ const Header = (props) => {
             </div>
         </header>
     );
-}
+};
+
+Header.propTypes = {
+    storeName: PropTypes.string.isRequired
+};
  
 export default Header;

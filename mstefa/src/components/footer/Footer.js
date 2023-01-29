@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import "./Footer.css";
 
 import instagram from "./icons/instagram.svg";
@@ -5,9 +7,8 @@ import facebook from "./icons/facebook.svg";
 import vk from "./icons/vk.svg";
 import pay from "./icons/pay.png";
 
-const Footer = (props) => {
+const Footer = ({storeName}) => {
     return ( 
-
         <footer className="footer">
             <div className="container">
                 <nav className="nav">
@@ -21,7 +22,7 @@ const Footer = (props) => {
                     </div>
 
                     <h2 className="footer-logo">
-                        <a href="#!">{props.storeName}</a>
+                        <a href="#!">{storeName}</a>
                     </h2>
 
                     <div className="footer-social">
@@ -48,8 +49,11 @@ const Footer = (props) => {
                 </nav>
             </div>
         </footer>
-
     );
-}
+};
+
+Footer.propTypes = {
+    storeName: PropTypes.string.isRequired
+};
  
 export default Footer;
