@@ -1,0 +1,62 @@
+/* for Menu */
+.nav-menu-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu-link:hover, .nav-menu-link:focus {
+    color: var(--red);
+}
+
+.nav-menu-link::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+
+    display: block;
+    height: 2px;
+    background-color: var(--biege);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu-link:hover::after {
+    right: 0;
+}
+
+/* for Pages */
+.categories-link {
+    color: #686868;
+    transition: color 0.2s ease-in;
+}
+
+.categories-link:hover {
+    color: var(--red);
+}
+
+.active-category {
+    position: relative;
+    font-size: 1.1em;
+    color: var(--black);
+}
+
+.active-category:hover {
+    color: var(--black);
+    cursor: default;
+}
+
+.active-category::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+
+    display: block;
+    height: 2px;
+    background-color: var(--red);
+}

@@ -1,0 +1,133 @@
+.info-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.product-category-link {
+    color: #686868;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.product-category-link a {
+    transition: color 0.2s ease-in;
+}
+
+.product-category-link a:hover {
+    color: #b98a80;
+}
+
+.product-title {
+    color: var(--red);
+    text-shadow: 1px 1px 1px gray;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.product-price {
+    color: #31a88a;
+    text-shadow: 1px 1px 1px var(--green);
+    font-size: 1.2em;
+}
+
+.product-price::after {
+    content: ' BYN';
+}
+
+.product-colors {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.color-info {
+    display: flex;
+    flex-direction: column;
+
+    color: #363636;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.color-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.color-name {
+    color: var(--black);
+    font-weight: 300;
+}
+
+.color-hex {
+    width: 30px;
+    height: 30px;
+    background-color: bisque;
+    border-radius: 50%;
+}
+
+.product-btn {
+    margin: 35px 0;
+}
+
+.product-btn-note {
+    color: #686868;
+    font-size: 0.6em;
+    margin-top: 10px;
+}
+
+.product-composition {
+    display: flex;
+
+    color: #363636;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    margin-bottom: 10px;
+}
+
+.composition-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    color: var(--black);
+    font-weight: 300;
+    margin-left: 15px;
+}
+
+.discription {
+    color: #686868;
+    font-size: 0.8em;
+    line-height: 1.4;
+}
+
+.product-care summary, .product-delivery summary {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-bottom: lightgray solid 1px;
+    padding-bottom: 10px;
+}
+
+.product-care ul, .product-delivery p {
+    color: #31a88a;
+    font-size: 0.7em;
+    line-height: 1.5;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+
+.product-care li {
+    margin-top: 8px;
+}

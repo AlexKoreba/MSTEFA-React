@@ -1,0 +1,26 @@
+.heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-color: #f0ded081;
+    border-radius: 50%;
+    line-height: 82px;
+    text-align: center;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in;
+}
+
+.heart img {
+    width: 30px;
+}
+
+.heart-hidden {
+    visibility: hidden;
+    opacity: 0;
+}

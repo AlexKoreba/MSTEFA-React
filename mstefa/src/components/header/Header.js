@@ -1,6 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 import PropTypes from "prop-types";
 
 import DropDownMenu from "./../dropdownMenu/DropDownMenu";
+import Counter from "./../counter/Counter";
 import "./Header.css";
 
 import cart from "./icons/cart.svg";
@@ -8,7 +11,7 @@ import heart from "./icons/heart.svg";
 import search from "./icons/search.svg";
 import user from "./icons/user.svg";
 
-const Header = ({storeName}) => {
+const Header = ( {storeName, likesAmount, cartAmount} ) => {
     return ( 
         <header className="header">
             <div className="container">
@@ -16,7 +19,9 @@ const Header = ({storeName}) => {
 
                     <DropDownMenu />
 
-                    <h1 className="logo"><a href="#!">{storeName}</a></h1>
+                    <h1 className="logo">
+                        <NavLink to="/">{storeName}</NavLink>
+                    </h1>
 
                     <ul className="nav-icons">
                         <li>
@@ -28,14 +33,14 @@ const Header = ({storeName}) => {
                         <li>
                             <a href="./likes.html" className="likes">
                                 <img src={heart} alt="Heart's icon" />
-                                <span className="likes-counter">0</span>
+                                <Counter value={likesAmount} />
                             </a>
                         </li>
 
                         <li>
                             <a href="./basket.html" className="cart">
                                 <img src={cart} alt="Cart's icon" />
-                                <span className="cart-counter">0</span>
+                                <Counter value={cartAmount} />
                             </a>
                         </li>
 

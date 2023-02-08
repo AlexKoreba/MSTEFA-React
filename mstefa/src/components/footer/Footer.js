@@ -1,5 +1,5 @@
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
-
 import "./Footer.css";
 
 import instagram from "./icons/instagram.svg";
@@ -8,6 +8,7 @@ import vk from "./icons/vk.svg";
 import pay from "./icons/pay.png";
 
 const Footer = ({storeName}) => {
+
     return ( 
         <footer className="footer">
             <div className="container">
@@ -21,8 +22,8 @@ const Footer = ({storeName}) => {
 
                     </div>
 
-                    <h2 className="footer-logo">
-                        <a href="#!">{storeName}</a>
+                    <h2 className="footer-logo" onClick={ () => window.scrollTo(0, 0) }>
+                        {storeName} 
                     </h2>
 
                     <div className="footer-social">
@@ -31,17 +32,17 @@ const Footer = ({storeName}) => {
 
                         <div className="footer-social-icons">
     
-                            <a href="https://www.instagram.com/mstefa.brand/" target="_blank" rel="noreferrer">
+                            <NavLink to="https://www.instagram.com/mstefa.brand/" target="_blank" rel="noreferrer">
                                 <img src={instagram} alt="Instagram icon" />
-                            </a>
-        
-                            <a href="https://www.vk.com/" target="_blank" rel="noreferrer">
+                            </NavLink>
+
+                            <NavLink to="https://www.vk.com/" target="_blank" rel="noreferrer">
                                 <img src={vk} alt="VK icon" />
-                            </a>
-        
-                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                            </NavLink>
+
+                            <NavLink to="https://www.facebook.com/" target="_blank" rel="noreferrer">
                                 <img src={facebook} alt="Facebook icon" />
-                            </a>
+                            </NavLink>
 
                         </div>
                     </div>

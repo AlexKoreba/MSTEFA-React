@@ -1,0 +1,16 @@
+.counter {
+    position: absolute;
+    top: -12px;
+    right: -2px;
+
+    display: block;
+    width: 13px;
+    height: 13px;
+
+    background-color: var(--accent-color);
+    font-size: 8px;
+    text-align: center;
+    line-height: 11px;
+    border: 0.8px solid var(--dark-color);
+    border-radius: 50%;
+}

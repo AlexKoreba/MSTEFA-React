@@ -1,0 +1,36 @@
+.products-wrapper {
+    display: flex;
+    padding: 20px 0 80px 0;
+}
+
+.products-categories {
+    flex: 0 0 220px;
+    padding: 120px 0 0 15px;
+}
+
+.categories-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 20px;
+}
+
+.products-type {
+    flex: 1 1 0;
+    font-size: 20px;
+}
+
+.products-type-title {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+
+.products-type-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}

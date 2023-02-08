@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Category from "./Category";
+import Category from "./../category/Category";
 import products from "./../../helpers/productsList.json";
 
 import "./DropDownMenu.css";
@@ -30,10 +30,10 @@ const DropDownMenu = () => {
             <ul className="nav-list">
 
                 {
-                    Object.keys(products).sort().map( category => <Category key={category} category={category} />)
+                    Object.keys(products).sort().map( category => <Category key={category} category={category} workmode="forMenu" />)
                 }
 
-                <Category key="certificates" category="certificates" />
+                <Category key="certificates" category="certificates" workmode="forMenu" />
                 
             </ul>
         </span>

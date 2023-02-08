@@ -1,0 +1,21 @@
+.add-to-cart {
+    font-family: 'Federo', sans-serif;
+    color: var(--white);
+    background-color: var(--black);
+    border: var(--black) solid 2px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 12px 17px;
+
+    transition: all 0.3s ease-in;
+}
+
+.add-to-cart:hover, .add-to-cart-active {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.add-to-cart-active {
+    cursor: default;
+}
