@@ -1,0 +1,52 @@
+.cart-list-product {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    font-size: 1.2em;
+    border-bottom: lightgray solid 1px;
+    padding: 30px 0;
+}
+
+.cart-list-product .first-column img {
+    visibility: visible;
+    width: 100px;
+    height: 140px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.cart-list-product .second-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.second-column-title {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.cart-list-product .third-column, .cart-list-product .fifth-column {
+    font-size: 1.2em;
+}
+
+.cart-list-product .third-column::after, .cart-list-product .fifth-column::after {
+    content: ' BYN';
+}
+
+.cart-list-product .fourth-column input {
+    width: 50px;
+    height: 40px;
+
+    color: #25252575;
+    background-color: rgb(240, 240, 240);
+    border: lightgray solid 2px;
+    text-align: center;
+
+    transition: all 0.3s ease-in;
+}
+
+.cart-list-product .fourth-column input:hover, .cart-list-product .fourth-column input:focus {
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+}

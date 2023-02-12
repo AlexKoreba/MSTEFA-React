@@ -1,0 +1,42 @@
+.likes {
+    min-height: calc(100vh - 251px);
+    text-transform: uppercase;
+}
+
+.likes-wrapper {
+    padding: 20px 0 80px 0;
+}
+
+.likes-title {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.likes-content {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.likes-content-heading {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+
+    border-top: lightgray solid 1px;
+    border-bottom: lightgray solid 1px;
+    padding: 15px 0;
+}
+
+.first-column, .second-column {
+    flex: 0 1 150px;
+}
+
+.third-column, .fourth-column, .fifth-column {
+    flex: 1 1 150px;
+} 
+
+.likes-content-heading .first-column, .likes-content-heading .second-column, .likes-content-heading .fifth-column {
+    visibility: hidden;
+}

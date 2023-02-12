@@ -31,17 +31,17 @@ const Header = ( {storeName, likesAmount, cartAmount} ) => {
                         </li>
 
                         <li>
-                            <a href="./likes.html" className="likes">
+                            <NavLink to="/likes" className="likes">
                                 <img src={heart} alt="Heart's icon" />
                                 <Counter value={likesAmount} />
-                            </a>
+                            </NavLink>
                         </li>
 
                         <li>
-                            <a href="./basket.html" className="cart">
+                            <NavLink to="/cart" className="cart">
                                 <img src={cart} alt="Cart's icon" />
                                 <Counter value={cartAmount} />
-                            </a>
+                            </NavLink>
                         </li>
 
                         <li>

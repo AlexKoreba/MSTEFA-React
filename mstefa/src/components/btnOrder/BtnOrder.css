@@ -1,0 +1,42 @@
+.btn-order {
+    font-family: 'Federo', sans-serif;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #25252523; 
+    border: 1px solid var(--dark-color);
+    font-size: 0.8em;
+    text-transform: uppercase;
+
+	padding: 12px 15px;
+	margin-top: 40px;
+
+    overflow: hidden;
+	transition: all 0.5s ease-out;
+}
+
+.btn-order::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: -1;
+
+    width: 0;
+    height: 100%;
+
+    transform: skew(35deg);
+    transition: all 0.7s ease-out;
+}
+
+.btn-order:hover {
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.btn-order:hover::before {
+    width: 170%;
+    background-color: var(--dark-color);
+}

@@ -1,0 +1,15 @@
+.empty {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: var(--secondary-color);
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.empty img {
+    width: 50px;
+    margin-bottom: 15px;
+}

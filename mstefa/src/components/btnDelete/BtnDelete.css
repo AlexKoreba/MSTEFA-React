@@ -1,0 +1,43 @@
+.btn-delete {
+    position: relative;
+    visibility: visible;
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.1em;
+    color: darkgray;
+    background-color: var(--light-color);
+    border: lightgray solid 2px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in;
+}
+
+.btn-delete:hover {
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+.close {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: darkgray;
+
+    transition: all 0.3s ease-in;
+}
+
+.close:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.close:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.btn-delete:hover .close {
+    background-color: var(--dark-color);
+}

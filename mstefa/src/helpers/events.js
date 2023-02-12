@@ -1,8 +1,16 @@
 import { EventEmitter } from "events";
 
 let productEvents = new EventEmitter();
-
 // EChangedHeartStatus
 // EActiveAddToCart
+// EActiveDeleteFromCart
+// EActiveDeleteFromLikes
 
-export { productEvents };
+let cartEvents = new EventEmitter();
+// EChangedProductSubtotal 
+
+let modalEvents = new EventEmitter();
+// EOpenedModalWindow 
+// EClosedModalWindow 
+
+export { productEvents, cartEvents, modalEvents };
