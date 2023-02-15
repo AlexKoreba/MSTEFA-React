@@ -1,74 +1,83 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import Btn from "./../btn/Btn";
+
+import arrow from "./img/arrow.svg";
 import "./Slider.css";
 
-import slide_1 from "./img/slide-1.jpg";
-import slide_2 from "./img/slide-2.jpg";
-import slide_3 from "./img/slide-3.jpg";
-import arrow from "./img/arrow.svg";
 
 const Slider = () => {
 
-    const [workMode] = useState(1)
+    const slider = useRef(null);
+
+    const [workMode, setWorkMode] = useState(1);
+    const [sliderBottom, setSliderBottom] = useState(0);
+
+    useEffect( () => {
+        if (slider.current) {
+            let bottom = slider.current.getBoundingClientRect().top + window.pageYOffset + slider.current.offsetHeight;
+            setSliderBottom(bottom);
+        }
+    },[slider])
+
+    useEffect( () => {
+        AOS.init();
+    },[])
+
+    const switchNext = () => setWorkMode( currentValue => currentValue === 3 ? 1 : currentValue + 1 );
+    const switchPrev = () => setWorkMode( currentValue => currentValue === 1 ? 3 : currentValue - 1 );
 
     const slideCode = 
-                    <div 
-                        className="slide" id={`slide-${workMode}`} 
-                        style={ 
-                            workMode === 1 
-                            ? {backgroundImage: `url(${slide_1})`, backgroundPosition: "center 20%"} 
-                            : workMode === 2 
-                            ? {backgroundImage: `url(${slide_2})`, backgroundPosition: "center 35%"} 
-                            : workMode === 3
-                            ? {backgroundImage: `url(${slide_3})`, backgroundPosition: "center 25%"}
-                            : null
-                            }>
-                        <img src={`slide_${workMode}`} alt={`Slide ${workMode}`} />
-                        <div className="slide-content" data-aos="fade-down-right" data-aos-duration="1000">
-                            {workMode === 1 
-                            ? 
-                            <>
-                                <h1 className="slide-heading">MSTEFA brand</h1>
-                                <p className="slide-subtitle">Belarusian women's clothing brand made from natural fabrics with an emphasis on color</p>
-                            </>
-                            : null}
-                            <a className="btn" href="./contacts.html">Learn more</a>
-                        </div>
-                    </div>   
+                        <>
+                            {
+                                workMode === 1 
+                                ? 
+                                <div className="slide-content" data-aos="fade-down-right" data-aos-duration="1000">
+                                    <h1 className="slide-heading">MSTEFA brand</h1>
+                                    <p className="slide-subtitle">Belarusian women's clothing brand made from natural fabrics with an emphasis on color</p>
+                                    <Btn url="/contacts" btnText="learn more" />
+                                </div>
+                                : 
+                                workMode === 2
+                                ?
+                                <>
+                                    <span data-aos="zoom-in-right" data-aos-duration="1000">
+                                        <p className="slide-title">Choose your look for today</p>
+                                    </span>
+                                    <span onClick={ () => window.scrollTo(0, sliderBottom) }>
+                                        <Btn btnText="start buying" />
+                                    </span>
+                                </>
+                                :
+                                workMode === 3
+                                ?
+                                <>
+                                    <p className="slide-title" data-aos="zoom-out-up" data-aos-duration="1000">Love and care in each of our products</p>
+                                    <Btn url="/useful" btnText="useful info" />
+                                </>
+                                : null
+                            }
+                        </>;
+
 
     return ( 
-        <div className="slider">
+        <div className="slider" ref={slider}>
+
             <div id="slider">
-
-                {slideCode}
-
-                {/* <div className="slide" id="slide-1" style={ {backgroundImage: `url(${slide_1})`, backgroundPosition: "center 20%"} }>
-                    <img src={slide_1} alt="Slide 1" />
-                    <div className="slide-content" data-aos="fade-down-right" data-aos-duration="1000">
-                        <h1 className="slide-heading">MSTEFA brand</h1>
-                        <p className="slide-subtitle">Belarusian women's clothing brand made from natural fabrics with an emphasis on color</p>
-                        <a className="btn" href="./contacts.html">Learn more</a>
-                    </div>
+                <div className="slide" id={`slide-${workMode}`}>
+                    <img src={`slide_${workMode}`} alt={`Slide ${workMode}`} />
+                    {slideCode}
                 </div>
-
-                <div className="slide" id="slide-2" style={ {backgroundImage: `url(${slide_2})`, backgroundPosition: "center 35%"} }>
-                    <img src={slide_2} alt="Slide 2" />
-                    <p className="slide-title">Choose your look for today</p>
-                    <a className="btn" href="#collection">Start buying</a>
-                </div>
-
-                <div className="slide" id="slide-3" style={ {backgroundImage: `url(${slide_3})`, backgroundPosition: "center 25%"} }>
-                    <img src={slide_3} alt="Slide 3" />
-                    <p className="slide-title">Love and care in each of our products</p>
-                    <a className="btn" href="./useful.html">Useful info</a>
-                </div> */}
-
             </div>
 
             <div className="controls">
-                <img id="btnPrev" src={arrow} alt="Arrow's icon" />
-                <img id="btnNext" src={arrow} alt="Arrow's icon" />
+                <img id="btnPrev" src={arrow} alt="Arrow's icon" onClick={switchPrev} />
+                <img id="btnNext" src={arrow} alt="Arrow's icon" onClick={switchNext} />
             </div>
+
         </div> 
     )
 }

@@ -1,4 +1,6 @@
+import React from "react";
 import PropTypes from "prop-types";
+
 import { productEvents } from "./../../helpers/events";
 import "./BtnAddToCart.css";
 
@@ -24,4 +26,4 @@ BtnAddToCart.propTypes = {
     productID: PropTypes.number.isRequired
 };
  
-export default BtnAddToCart;
+export default React.memo(BtnAddToCart);

@@ -7,10 +7,10 @@
     width: 13px;
     height: 13px;
 
-    background-color: var(--accent-color);
+    background-color: var(--red);
     font-size: 8px;
     text-align: center;
     line-height: 11px;
-    border: 0.8px solid var(--dark-color);
+    border: 0.8px solid var(--black);
     border-radius: 50%;
 }

@@ -33,7 +33,7 @@ const DropDownMenu = () => {
                     Object.keys(products).sort().map( category => <Category key={category} category={category} workmode="forMenu" />)
                 }
 
-                <Category key="certificates" category="certificates" workmode="forMenu" />
+                <Category key="all products" category="all products" workmode="forMenu" />
                 
             </ul>
         </span>

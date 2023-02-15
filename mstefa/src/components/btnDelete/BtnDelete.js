@@ -1,4 +1,6 @@
+import React from "react";
 import PropTypes from "prop-types";
+
 import { productEvents } from "./../../helpers/events";
 import "./BtnDelete.css";
 
@@ -29,4 +31,4 @@ BtnDelete.propTypes = {
     productID: PropTypes.number.isRequired
 };
  
-export default BtnDelete;
+export default React.memo(BtnDelete);

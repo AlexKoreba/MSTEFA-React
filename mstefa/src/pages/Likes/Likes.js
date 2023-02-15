@@ -1,6 +1,10 @@
-import ProductInLikes from "./../../components/productInLikes/ProductInLikes";
+import PropTypes from "prop-types";
+
 import Empty from "./../../components/empty/Empty";
+import ProductInLikes from "./../../components/productInLikes/ProductInLikes";
+
 import "./Likes.css";
+
 
 const Likes = ({products}) => {
 
@@ -37,4 +41,30 @@ const Likes = ({products}) => {
     );
 }
  
+Likes.propTypes = {
+    products: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            type: PropTypes.string.isRequired, 
+            title: PropTypes.string.isRequired, 
+            price: PropTypes.number.isRequired, 
+            color: PropTypes.arrayOf(
+                PropTypes.shape({
+                    colorName: PropTypes.string.isRequired,
+                    colorHEX: PropTypes.string.isRequired
+                })
+            ),
+            composition: PropTypes.arrayOf(
+                PropTypes.shape({
+                    property: PropTypes.string.isRequired,
+                    value: PropTypes.string.isRequired
+                })
+            ),
+            description: PropTypes.string,
+            isActiveHeart: PropTypes.bool.isRequired,
+            isActiveCart: PropTypes.bool.isRequired
+        })
+    )
+};
+
 export default Likes;

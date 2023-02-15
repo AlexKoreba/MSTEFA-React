@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
+
 import "./Footer.css";
 
 import instagram from "./icons/instagram.svg";
 import facebook from "./icons/facebook.svg";
 import vk from "./icons/vk.svg";
 import pay from "./icons/pay.png";
+
+
 
 const Footer = ({storeName}) => {
 

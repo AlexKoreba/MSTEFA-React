@@ -1,0 +1,43 @@
+.btn {
+    position: absolute;
+    top: 75%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(231, 86, 14, 0.2); 
+    border: 1px solid var(--red);
+    color: var(--biege);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+	padding: 18px 40px;
+	margin-top: 30px;
+
+    overflow: hidden;
+	transition: all 0.5s ease-out;
+}
+
+.btn::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: -1;
+
+    width: 0;
+    height: 100%;
+
+    transform: skew(35deg);
+    transition: all 0.7s ease-out;
+}
+
+.btn:hover {
+    color: var(--black);
+}
+
+.btn:hover::before {
+    width: 150%;
+    background-color: var(--red);
+}

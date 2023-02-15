@@ -1,9 +1,12 @@
 import { useState, useEffect, useMemo } from "react";
+import PropTypes from "prop-types";
+
 import Empty from "./../../components/empty/Empty";
 import ProductInCart from "./../../components/productInCart/ProductInCart";
 import CartTotals from "./../../components/cartTotals/CartTotals";
 
 import { cartEvents } from "./../../helpers/events";
+
 import "./Cart.css";
 
 const Cart = ({products}) => {
@@ -102,5 +105,31 @@ const Cart = ({products}) => {
         </main>
     );
 }
+
+Cart.propTypes = {
+    products: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            type: PropTypes.string.isRequired, 
+            title: PropTypes.string.isRequired, 
+            price: PropTypes.number.isRequired, 
+            color: PropTypes.arrayOf(
+                PropTypes.shape({
+                    colorName: PropTypes.string.isRequired,
+                    colorHEX: PropTypes.string.isRequired
+                })
+            ),
+            composition: PropTypes.arrayOf(
+                PropTypes.shape({
+                    property: PropTypes.string.isRequired,
+                    value: PropTypes.string.isRequired
+                })
+            ),
+            description: PropTypes.string,
+            isActiveHeart: PropTypes.bool.isRequired,
+            isActiveCart: PropTypes.bool.isRequired
+        })
+    )
+};
  
 export default Cart;

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { ProductContext } from "./../../context/ProductContext";
 
 import Heart from "./../heart/Heart";
+
 import "./ProductCard.css";
 
 const ProductCard = ({product}) => {

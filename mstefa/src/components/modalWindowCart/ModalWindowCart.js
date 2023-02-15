@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
+
 import { modalEvents } from "./../../helpers/events";
+
+import "./ModalWindowCart.css";
 
 import success from "./success.png";
 import fail from "./fail.png";
 
-import "./ModalWindowCart.css";
 
 const ModalWindowCart = ({workMode, total}) => {
 

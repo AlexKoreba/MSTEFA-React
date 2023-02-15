@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-
 import PropTypes from "prop-types";
 
 import DropDownMenu from "./../dropdownMenu/DropDownMenu";
 import Counter from "./../counter/Counter";
+
 import "./Header.css";
 
 import cart from "./icons/cart.svg";
@@ -25,9 +25,9 @@ const Header = ( {storeName, likesAmount, cartAmount} ) => {
 
                     <ul className="nav-icons">
                         <li>
-                            <a href="#!">
+                            {/* <NavLink to="/search"> */}
                                 <img src={search} alt="Search's icon" />
-                            </a>
+                            {/* </NavLink> */}
                         </li>
 
                         <li>
@@ -45,9 +45,9 @@ const Header = ( {storeName, likesAmount, cartAmount} ) => {
                         </li>
 
                         <li>
-                            <a href="#!">
+                            {/* <NavLink to="/user"> */}
                                 <img src={user} alt="User's icon" />
-                            </a>
+                            {/* </NavLink> */}
                         </li>
                     </ul>
 
@@ -58,7 +58,9 @@ const Header = ( {storeName, likesAmount, cartAmount} ) => {
 };
 
 Header.propTypes = {
-    storeName: PropTypes.string.isRequired
+    storeName: PropTypes.string.isRequired,
+    likesAmount: PropTypes.number.isRequired,
+    cartAmount: PropTypes.number.isRequired
 };
  
 export default Header;

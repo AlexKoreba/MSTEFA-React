@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { cartEvents } from "./../../helpers/events";
+
 import BtnDelete from "./../btnDelete/BtnDelete";
 import "./ProductInCart.css";
 

@@ -255,6 +255,16 @@
         },
         {
             "type":"dresses",
+            "id":44033,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"with blue flowers",
+            "price":210,
+            "color":[{"colorName":"white","colorHEX":"#E2E2E0"}],
+            "composition":[{"property":"linen","value":"55%"},{"property":"viscose","value":"45%"}]
+        },
+        {
+            "type":"dresses",
             "id":20070,
             "isActiveHeart":false,
             "isActiveCart":false,
@@ -265,13 +275,53 @@
         },
         {
             "type":"dresses",
-            "id":44033,
+            "id":20071,
             "isActiveHeart":false,
             "isActiveCart":false,
-            "title":"with blue flowers",
-            "price":210,
-            "color":[{"colorName":"white","colorHEX":"#E2E2E0"}],
-            "composition":[{"property":"linen","value":"55%"},{"property":"viscose","value":"45%"}]
+            "title":"velvet first clone",
+            "price":145,
+            "color":[{"colorName":"black","colorHEX":"#252525"}],
+            "composition":[{"property":"polyester","value":"95%"},{"property":"elastane","value":"5%"}]
+        },
+        {
+            "type":"dresses",
+            "id":20072,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"velvet second clone",
+            "price":155,
+            "color":[{"colorName":"black","colorHEX":"#252525"}],
+            "composition":[{"property":"polyester","value":"95%"},{"property":"elastane","value":"5%"}]
+        },
+        {
+            "type":"dresses",
+            "id":20073,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"velvet third clone",
+            "price":165,
+            "color":[{"colorName":"black","colorHEX":"#252525"}],
+            "composition":[{"property":"polyester","value":"95%"},{"property":"elastane","value":"5%"}]
+        },
+        {
+            "type":"dresses",
+            "id":20074,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"velvet fourth clone",
+            "price":175,
+            "color":[{"colorName":"black","colorHEX":"#252525"}],
+            "composition":[{"property":"polyester","value":"95%"},{"property":"elastane","value":"5%"}]
+        },
+        {
+            "type":"dresses",
+            "id":20075,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"velvet fifth clone",
+            "price":185,
+            "color":[{"colorName":"black","colorHEX":"#252525"}],
+            "composition":[{"property":"polyester","value":"95%"},{"property":"elastane","value":"5%"}]
         }
     ],
     
@@ -333,16 +383,6 @@
     "skirts":[
         {
             "type":"skirts",
-            "id":74843,
-            "isActiveHeart":false,
-            "isActiveCart":false,
-            "title":"silk",
-            "price":159,
-            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
-            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
-        },
-        {
-            "type":"skirts",
             "id":1277,
             "isActiveHeart":false,
             "isActiveCart":false,
@@ -361,6 +401,66 @@
             "color":[{"colorName":"black","colorHEX":"#252525"}],
             "composition":[{"property":"polyester","value":"50%"},{"property":"polyurethane","value":"50%"}],
             "description":"Suitable for height from 155 cm to 180 cm."
+        },
+        {
+            "type":"skirts",
+            "id":74843,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"silk",
+            "price":159,
+            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
+            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
+        },
+        {
+            "type":"skirts",
+            "id":74844,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"silk first clone",
+            "price":161,
+            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
+            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
+        },
+        {
+            "type":"skirts",
+            "id":74845,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"silk second clone",
+            "price":162,
+            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
+            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
+        },
+        {
+            "type":"skirts",
+            "id":74846,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"silk third clone",
+            "price":163,
+            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
+            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
+        },
+        {
+            "type":"skirts",
+            "id":74847,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"silk fourth clone",
+            "price":164,
+            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
+            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
+        },
+        {
+            "type":"skirts",
+            "id":74848,
+            "isActiveHeart":false,
+            "isActiveCart":false,
+            "title":"silk fifth clone",
+            "price":165,
+            "color":[{"colorName":"emerald","colorHEX":"#008080"}],
+            "composition":[{"property":"viscose","value":"97%"},{"property":"elastane","value":"3%"}]
         }
     ],
     

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
+import PropTypes from "prop-types";
 
-// import products from "../../helpers/productsList.json";
 import { ProductContext } from "./../../context/ProductContext";
 
 import PhotoContentSlider from "./../../components/photoContentSlider/PhotoContentSlider";
@@ -29,5 +29,9 @@ const Product = ({products}) => {
         </main>
     );
 }
+
+Product.propTypes = {
+    products: PropTypes.object
+};
  
 export default Product;

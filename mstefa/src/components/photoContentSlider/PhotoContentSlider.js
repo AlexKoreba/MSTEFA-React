@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import Heart from "./../heart/Heart";
+
 import "./PhotoContentSlider.css";
 
 
@@ -26,7 +27,6 @@ const PhotoContentSlider = ({type, title}) => {
         )               
     }
 
-
     return ( 
         <section className="photo-content">
             <div className="main-photo" style={{backgroundImage: `url(./../../img/products/${type}/${title.split(" ").join("-")}/${activePhoto}.jpg)`}}>
@@ -44,4 +44,4 @@ PhotoContentSlider.propTypes = {
     title: PropTypes.string.isRequired
 };
  
-export default PhotoContentSlider;
+export default React.memo(PhotoContentSlider);

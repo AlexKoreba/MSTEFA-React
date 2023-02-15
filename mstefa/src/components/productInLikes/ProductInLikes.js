@@ -1,5 +1,6 @@
 import BtnAddToCart from "./../btnAddToCart/BtnAddToCart";
 import BtnDelete from "./../btnDelete/BtnDelete";
+
 import "./ProductInLikes.css";
 
 const ProductInLikes = ({product}) => {

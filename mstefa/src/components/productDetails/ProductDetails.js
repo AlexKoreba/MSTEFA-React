@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import BtnAddToCart from "./../btnAddToCart/BtnAddToCart";
+
 import "./ProductDetails.css";
 
 const ProductDetails = ({product}) => {

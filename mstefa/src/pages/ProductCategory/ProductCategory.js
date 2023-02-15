@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-
-// import products from "./../../helpers/productsList.json";
+import PropTypes from "prop-types";
 
 import Category from "../../components/category/Category";
 import ProductCard from "./../../components/productCard/ProductCard";
+
 import "./ProductCategory.css";
+
 
 const ProductCategory = ({products}) => {
 
@@ -37,5 +38,9 @@ const ProductCategory = ({products}) => {
         </main>
     );
 }
+
+ProductCategory.propTypes = {
+    products: PropTypes.object
+};
  
 export default ProductCategory;

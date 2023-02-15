@@ -11,7 +11,11 @@ const Category = ({category, workmode}) => {
     return ( 
             <li>
                 <NavLink 
-                    to={`/products/${category}`} 
+                    to={
+                        category === "all products"
+                        ? `/products/`
+                        : `/products/${category}`
+                    } 
                     className={
                         workmode === "forMenu" ? 
                             "nav-menu-link" : 

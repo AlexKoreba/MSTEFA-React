@@ -5,7 +5,7 @@
     transform: translateX(-50%);
 
     background-color: #25252523; 
-    border: 1px solid var(--dark-color);
+    border: 1px solid var(--black);
     font-size: 0.8em;
     text-transform: uppercase;
 
@@ -32,11 +32,11 @@
 }
 
 .btn-order:hover {
-    color: var(--light-color);
+    color: var(--white);
     cursor: pointer;
 }
 
 .btn-order:hover::before {
     width: 170%;
-    background-color: var(--dark-color);
+    background-color: var(--black);
 }

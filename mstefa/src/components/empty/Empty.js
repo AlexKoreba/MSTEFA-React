@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import img from "./leaf.svg";
 import "./Empty.css";
 
@@ -9,5 +11,9 @@ const Empty = ({title}) => {
          </div>
     );
 }
+
+Empty.propTypes = {
+    title: PropTypes.string.isRequired
+};
  
 export default Empty;

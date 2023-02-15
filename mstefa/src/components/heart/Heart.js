@@ -1,6 +1,8 @@
 import { useContext } from "react";
+
 import { ProductContext } from "./../../context/ProductContext";
 import { productEvents } from "./../../helpers/events";
+
 import "./Heart.css";
  
 const Heart = () => {

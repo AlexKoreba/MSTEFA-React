@@ -9,13 +9,14 @@ import { productEvents, modalEvents } from "./helpers/events";
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
+import Home from "./pages/Home/Home";
+import Products from "./pages/Products/Products";
 import ProductCategory from "./pages/ProductCategory/ProductCategory";
 import Product from "./pages/Product/Product";
 import Likes from "./pages/Likes/Likes";
 import Cart from "./pages/Cart/Cart";
 import Contacts from './pages/Contacts/Contacts';
 import Useful from './pages/Useful/Useful';
-// import Slider from './components/slider/Slider';
 
 import ModalWindowCart from "./components/modalWindowCart/ModalWindowCart";
 import './styles/main.css';
@@ -224,7 +225,8 @@ function App() {
                 <Header storeName={storeName} likesAmount={likes.length} cartAmount={cart.length} />
 
                 <Routes>
-                    {/* <Route path="/" element={<Slider />} /> */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/products/" element={<Products products={products} />} />
                     <Route path="/products/:type" element={<ProductCategory products={products} />} />
                     <Route path="/products/:type/:title" element={<Product products={products} />} />
                     <Route path="/likes" element={<Likes products={likes} />} />

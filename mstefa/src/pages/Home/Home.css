@@ -1,0 +1,17 @@
+.main {
+    text-align: center;
+}
+
+.collection-title {
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: calc( (100px - 30px) / 2 );
+}
+
+.collection-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px 80px;
+}
