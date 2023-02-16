@@ -30,3 +30,20 @@
     font-weight: 300;
     text-transform: uppercase;
 }
+
+
+@media (max-width: 1000px) {
+
+    .sale-title {
+        font-size: 13em;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sale-title {
+        font-size: 10em;
+    }
+
+}

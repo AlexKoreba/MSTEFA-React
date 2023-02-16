@@ -131,3 +131,19 @@
 .product-care li {
     margin-top: 8px;
 }
+
+
+@media (max-width: 900px) {
+
+    .info-content {
+        width: 560px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .info-content {
+        width: 380px;
+    }
+
+}

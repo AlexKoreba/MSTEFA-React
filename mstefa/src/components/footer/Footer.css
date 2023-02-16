@@ -86,3 +86,36 @@
 .footer-social img:hover {
     transform: scale(1.6);
 }
+
+
+@media (max-width: 1000px) {
+
+    .footer-info img, .footer-social p {
+        display: none;
+    }
+
+    .footer-logo {
+        flex: 0 0 300px;
+    }
+
+    .footer-logo:hover:after {
+        height: 110px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .footer-info, .footer-social {
+        display: none;
+    }
+
+    .footer .nav {
+        justify-content: center;
+    }
+
+    .footer-logo:hover:after {
+        height: 100px;
+    }
+
+}

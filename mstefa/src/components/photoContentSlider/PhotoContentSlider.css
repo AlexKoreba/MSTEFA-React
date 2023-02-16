@@ -46,3 +46,46 @@
     opacity: 1;
     border: #b98a80 solid 3px;
 }
+
+
+@media (max-width: 1000px) {
+
+    .photo-content {
+        flex-direction: column;
+    }
+
+    .secondary-photo {
+        flex-direction: row;
+        column-gap: 15px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .main-photo {
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .main-photo {
+        width: 380px;
+        height: 460px;
+    }
+
+    .secondary-photo {
+        width: 380px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 0;
+    }
+
+    .secondary-photo-img {
+        width: 70px;
+        height: 95px;
+    }
+
+}

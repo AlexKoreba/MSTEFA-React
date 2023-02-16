@@ -34,3 +34,20 @@
     flex-wrap: wrap;
     gap: 80px;
 }
+
+
+@media (max-width: 700px) {
+
+    .products-categories {
+        flex-basis: auto;
+        padding-top: 30px;
+    }
+
+    .categories-list {
+        justify-content:space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+    
+}

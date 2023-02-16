@@ -1,11 +1,12 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import Category from "./../category/Category";
-import products from "./../../helpers/productsList.json";
 
 import "./DropDownMenu.css";
 
-const DropDownMenu = () => {
+
+const DropDownMenu = ({categories}) => {
 
     const [openingMode, setOpeningMode] = useState('close');
 
@@ -30,7 +31,7 @@ const DropDownMenu = () => {
             <ul className="nav-list">
 
                 {
-                    Object.keys(products).sort().map( category => <Category key={category} category={category} workmode="forMenu" />)
+                    categories.sort().map( category => <Category key={category} category={category} workmode="forMenu" />)
                 }
 
                 <Category key="all products" category="all products" workmode="forMenu" />
@@ -39,5 +40,9 @@ const DropDownMenu = () => {
         </span>
     );
 }
+
+DropDownMenu.propTypes = {
+    categories: PropTypes.arrayOf(PropTypes.string.isRequired)
+};
  
 export default DropDownMenu;

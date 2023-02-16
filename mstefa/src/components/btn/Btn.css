@@ -41,3 +41,14 @@
     width: 150%;
     background-color: var(--red);
 }
+
+
+@media (max-width: 700px) {
+
+    .btn {
+        font-size: 14px;
+	    padding: 15px 30px;
+	    margin-top: 20px;
+    }
+
+}

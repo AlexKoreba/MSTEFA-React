@@ -11,13 +11,13 @@ import heart from "./icons/heart.svg";
 import search from "./icons/search.svg";
 import user from "./icons/user.svg";
 
-const Header = ( {storeName, likesAmount, cartAmount} ) => {
+const Header = ( {storeName, likesAmount, cartAmount, productsCategories} ) => {
     return ( 
         <header className="header">
             <div className="container">
                 <nav className="nav" id="nav">
 
-                    <DropDownMenu />
+                    <DropDownMenu categories={productsCategories} />
 
                     <h1 className="logo">
                         <NavLink to="/">{storeName}</NavLink>
@@ -60,7 +60,8 @@ const Header = ( {storeName, likesAmount, cartAmount} ) => {
 Header.propTypes = {
     storeName: PropTypes.string.isRequired,
     likesAmount: PropTypes.number.isRequired,
-    cartAmount: PropTypes.number.isRequired
+    cartAmount: PropTypes.number.isRequired,
+    productsCategories: PropTypes.arrayOf(PropTypes.string.isRequired)
 };
  
 export default Header;

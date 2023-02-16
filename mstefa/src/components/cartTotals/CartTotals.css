@@ -33,3 +33,12 @@
 .cart-subtotal-value::after, .cart-total-value::after {
     content: ' BYN';
 }
+
+
+@media (max-width: 600px) {
+
+    .cart-totals {
+        width: 100%;
+    }
+
+}

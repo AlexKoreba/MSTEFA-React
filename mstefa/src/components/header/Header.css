@@ -45,3 +45,20 @@
 .nav-icons img {
     width: 24px;
 }
+
+
+@media (max-width: 1000px) {
+
+    .nav-icons {
+        column-gap: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .nav-icons {
+        column-gap: 10px;
+    }
+
+}

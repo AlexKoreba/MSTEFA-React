@@ -79,3 +79,39 @@
 .nav-list li:last-child .nav-menu-link::after {
     background-color: var(--red);
 }
+
+
+@media (max-width: 1650px) {
+
+    .nav-menu.open .bar:nth-child(1) {
+        transform: translate(290px, 8px) rotate(45deg);
+    }
+
+    .nav-menu.open .bar:nth-child(3) {
+        transform: translate(290px, -8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .nav-list {
+        width: 100%;
+        left: -100%;
+        bottom: -100px;
+
+        text-align: center;
+    }
+
+    .nav-menu.open .bar:nth-child(1) {
+        transform: translate(0, 8px) rotate(45deg);
+    }
+
+    .nav-menu.open .bar:nth-child(3) {
+        transform: translate(0, -8px) rotate(-45deg);
+    }
+
+    .nav-list li:last-child {
+        margin-top: 80px;
+    }
+
+}

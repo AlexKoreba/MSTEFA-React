@@ -19,3 +19,23 @@
 .add-to-cart-active {
     cursor: default;
 }
+
+
+@media (max-width: 800px) {
+
+    .likes .add-to-cart {
+        font-size: 0.7em;
+        padding: 7px 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .likes .add-to-cart {
+        width: 70px;
+        height: 50px;
+        padding: 5px 8px;
+    }
+
+}
